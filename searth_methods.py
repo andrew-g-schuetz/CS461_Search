@@ -3,7 +3,7 @@ from collections import deque
 
 #stores the cooridnates.csv file
 coordinates = {}
-with open('./data/coordinates.csv', newline='') as csvfile:
+with open('./coordinates.csv', newline='') as csvfile:
    #csv reader object is created
     csvreader = csv.reader(csvfile)
 
@@ -17,7 +17,7 @@ with open('./data/coordinates.csv', newline='') as csvfile:
         coordinates[city_name] = (latitude, longitude)
 
 adjacency = {}
-with open('./data/Adjacencies.txt', 'r') as file:
+with open('./Adjacencies.txt', 'r') as file:
     for line in file:
 
         city_one, city_two = line.strip().split(' ')
