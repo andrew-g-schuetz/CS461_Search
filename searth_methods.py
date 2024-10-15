@@ -263,7 +263,7 @@ def best_first_search(adjacency, coordinates, start, end):
             for neighbor in adjacency.get(current_town, []):
                 if neighbor not in visited:
 
-                    #estimated heuristic from the nieghbor to the end coordinate
+                    #estimated heuristic from the nieghbor to the end coordinate, smallest straight line distance
                     heuristic = coordinate_length(coordinates[neighbor], coordinates[end])
 
                     #actual distance from current_town to neighbor
